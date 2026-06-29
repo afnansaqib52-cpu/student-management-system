@@ -1,4 +1,3 @@
-
 * {
     margin: 0;
     padding: 0;
@@ -13,17 +12,22 @@ body {
 header {
     background: linear-gradient(135deg, #2c3e50, #3498db);
     color: rgb(254, 254, 254);
-    padding: 25px;
+    padding: 25px 15px;
     text-align: center;
     letter-spacing: 1px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
+header h1 {
+    font-size: clamp(1.1rem, 4vw, 1.8rem);
+}
+
 .container {
-    width: 85%;
+    width: 90%;
+    max-width: 1000px;
     margin: 30px auto;
-    background: (#f4f7fb);
-    padding: 25px;
+    background: #f4f7fb;
+    padding: clamp(15px, 3vw, 25px);
     border-radius: 12px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
     transition: 0.3s;
@@ -38,6 +42,7 @@ h2 {
     color: #2c3e50;
     border-left: 5px solid #3498db;
     padding-left: 10px;
+    font-size: clamp(1rem, 3vw, 1.3rem);
 }
 
 form {
@@ -51,6 +56,8 @@ form input {
     border: 1px solid #ccc;
     border-radius: 6px;
     transition: 0.3s;
+    font-size: clamp(0.85rem, 2.5vw, 1rem);
+    width: 100%;
 }
 
 form input:focus {
@@ -59,45 +66,55 @@ form input:focus {
     box-shadow: 0 0 5px #3498db;
 }
 
-button {
+button[type="submit"] {
     grid-column: span 2;
     background: linear-gradient(135deg, #3498db, #65a1c9);
-    color: rgb(253, 253, 253);
+    color: white;
     padding: 12px;
     border: none;
     border-radius: 6px;
-    font-size: 16px;
+    font-size: clamp(0.9rem, 3vw, 1rem);
     cursor: pointer;
     transition: 0.3s;
 }
 
-button:hover {
+button[type="submit"]:hover {
     background: linear-gradient(135deg, #2980b9, #1c5980);
     transform: scale(1.03);
+}
+
+/* Responsive Table */
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    border-radius: 10px;
 }
 
 table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
-    overflow: hidden;
-    border-radius: 10px;
+    min-width: 550px;
 }
 
 table th {
     background: #c1d8e8;
     color: black;
-    padding: 12px;
+    padding: clamp(8px, 2vw, 12px);
     font-style: oblique;
-    font-size: medium;
+    font-size: clamp(0.8rem, 2vw, 1rem);
+    white-space: nowrap;
 }
 
 table td {
-    padding: 12px;
+    padding: clamp(8px, 2vw, 12px);
     border-bottom: 1px solid #f3ecec;
     text-align: center;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-style: italic;
+    font-size: clamp(0.8rem, 2vw, 1rem);
+    white-space: nowrap;
 }
 
 table tr:nth-child(even) {
@@ -106,21 +123,9 @@ table tr:nth-child(even) {
 
 table tr:hover {
     background: #467eb9;
+    color: white;
     transition: 0.2s;
 }
-
-@media (max-width: 768px) {
-    form {
-        grid-template-columns: 1fr;
-    }
-
-    button {
-        grid-column: span 1;
-    }
-}
-
-
-
 
 .delete-btn {
     background: red;
@@ -129,8 +134,25 @@ table tr:hover {
     padding: 5px 10px;
     cursor: pointer;
     border-radius: 5px;
+    font-size: clamp(0.75rem, 2vw, 0.9rem);
 }
 
 .delete-btn:hover {
     background: darkred;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    form {
+        grid-template-columns: 1fr;
+    }
+
+    button[type="submit"] {
+        grid-column: span 1;
+    }
+
+    .container {
+        width: 95%;
+        margin: 15px auto;
+    }
 }
