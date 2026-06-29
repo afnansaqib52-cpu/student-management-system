@@ -2,83 +2,86 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student Result Management System</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
     <header>
         <h1>Student Result Management System</h1>
     </header>
     <div class="container">
         <h2>Enter Student Result</h2>
-
         <form>
             <input type="text" placeholder="Student Name" required>
             <input type="text" placeholder="SAP ID" required>
             <input type="number" placeholder="Math Marks" required>
-            <input type="number" placeholder=" Computer Science Marks" required>
+            <input type="number" placeholder="Computer Science Marks" required>
             <input type="number" placeholder="English Marks" required>
-
             <button type="submit">Submit Result</button>
         </form>
     </div>
-
-   <div class="container">
+    <div class="container">
         <h2>Result Records</h2>
-
-        <table>
-            <thead>
-                <tr>
-                    <th>Name</th>
-                    <th>Sap id</th>
-                    <th>Math</th>
-                    <th>Computer Science</th>
-                    <th>English</th>
-                    <th>Total</th>
-                    <th>Grade</th>
-                </tr>
-            </thead>
-
-            <tbody>
-                <tr>
-                    <td>MAHNOOR</td>
-                    <td>70167735</td>
-                    <td>85</td>
-                    <td>78</td>
-                    <td>90</td>
-                    <td>253</td>
-                    <td>A+</td>
-                 </tr>
-                 <tr>
-                     <td>AYESHA</td>
-                    <td>70167736</td>
-                    <td>67</td>
-                    <td>78</td>
-                    <td>85</td>
-                    <td>230</td>
-                    <td>B+</td>
-                 </tr>
-                 <tr>
-                     <td>ANDLEEB</td>
-                    <td>70167737</td>
-                    <td>55</td>
-                    <td>67</td>
-                    <td>58</td>
-                    <td>180</td>
-                    <td>C+</td>
-                </tr>
-                <tr>
-                    <td>ADEBA</td>
-                    <td>70167738</td>
-                    <td>55</td>
-                    <td>67</td>
-                    <td>58</td>
-                    <td>180</td>
-                    <td>C+</td>
-                </tr>
-            </tbody>
-        </table>
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Sap id</th>
+                        <th>Math</th>
+                        <th>Computer Science</th>
+                        <th>English</th>
+                        <th>Total</th>
+                        <th>Grade</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>MAHNOOR</td>
+                        <td>70167735</td>
+                        <td>85</td>
+                        <td>78</td>
+                        <td>90</td>
+                        <td>253</td>
+                        <td>A+</td>
+                        <td><button class="delete-btn">Delete</button></td>
+                    </tr>
+                    <tr>
+                        <td>AYESHA</td>
+                        <td>70167736</td>
+                        <td>67</td>
+                        <td>78</td>
+                        <td>85</td>
+                        <td>230</td>
+                        <td>B+</td>
+                        <td><button class="delete-btn">Delete</button></td>
+                    </tr>
+                    <tr>
+                        <td>ANDLEEB</td>
+                        <td>70167737</td>
+                        <td>55</td>
+                        <td>67</td>
+                        <td>58</td>
+                        <td>180</td>
+                        <td>C+</td>
+                        <td><button class="delete-btn">Delete</button></td>
+                    </tr>
+                    <tr>
+                        <td>ADEBA</td>
+                        <td>70167738</td>
+                        <td>55</td>
+                        <td>67</td>
+                        <td>58</td>
+                        <td>180</td>
+                        <td>C+</td>
+                        <td><button class="delete-btn">Delete</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
-   <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
+</html>
